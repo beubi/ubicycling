@@ -1,0 +1,23 @@
+/web/bundles/
+web/assetic/*
+web/media/*
+web/css/*
+web/js/*
+web/maintenance.html
+app/spool/*
+
+/app/bootstrap.php.cache
+/app/cache/*
+/app/config/parameters.yml
+/app/logs/*
+!app/cache/.gitkeep
+!app/logs/.gitkeep
+/build/
+/vendor/
+/bin/
+/composer.phar
+
+
+# Vagrant & Chef
+.vagrant
+chef/cookbooks/*

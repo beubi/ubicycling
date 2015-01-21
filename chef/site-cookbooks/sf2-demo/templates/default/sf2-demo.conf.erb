@@ -1,0 +1,15 @@
+<VirtualHost *:80>
+  ServerName <%= @params[:server_name] %>
+  ServerAlias <% @params[:server_aliases].each do |a| %><%= "#{a}" %> <% end %>
+
+  DocumentRoot <%= @params[:docroot] %>
+  <Directory <%= @params[:docroot] %>>
+     # enable the .htaccess rewrites
+     AllowOverride All
+     Require all granted
+  </Directory>
+
+  LogLevel info
+  ErrorLog <%= node['apache']['log_dir'] %>/<%= @application_name %>-error.log
+  CustomLog <%= node['apache']['log_dir'] %>/<%= @application_name %>-access.log combined
+</VirtualHost>
