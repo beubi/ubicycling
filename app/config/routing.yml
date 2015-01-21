@@ -1,0 +1,5 @@
+beubi_demo:
+    resource: "@BeubiDemoBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
