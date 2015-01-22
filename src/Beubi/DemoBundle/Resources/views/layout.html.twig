@@ -44,8 +44,8 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav pull-right">
                     {% block home %}<li><a href="{{ path('home') }}">Home</a></li>{% endblock %}
-                    {% block about %}<li><a href="{{ path('about') }}">About</a></li>{% endblock %}
-                    <li class="dropdown">
+                    {% block demo_form %}<li><a href="{{ path('demo_form') }}">Demo Form</a></li>{% endblock %}
+                    <li class="dropdown  {% block sidebar_toggle %} {% endblock %}">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">More Pages <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             {% block sidebar_left %}<li><a href="{{ path('sidebar_left') }}">Left Sidebar</a></li>{% endblock %}
@@ -53,6 +53,7 @@
                         </ul>
                     </li>
                     {% block contact %}<li><a href="{{ path('contacts') }}">Contact</a></li>{% endblock %}
+                    {% block about %}<li><a href="{{ path('about') }}">About</a></li>{% endblock %}
                     {% block signin %}<li><a class="btn" href="{{ path('signin') }}">Sign In / Sign Up</a></li>{% endblock %}
                 </ul>
             </div><!--/.nav-collapse -->

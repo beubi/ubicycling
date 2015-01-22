@@ -70,4 +70,23 @@ class DefaultController extends Controller
     {
         return array();
     }
+
+    /**
+     * @Route("/demo-form", name="demo_form")
+     * @Template("BeubiDemoBundle:Default:demo-form.html.twig")
+     */
+    public function demoFormAction()
+    {
+        $table_contents = array();
+
+        for ($i=0; $i < 100; $i++) {
+            $item = array('id' => $i+1, 'description' => 'A, quibusdam, nobis, eveniet consequatur alias doloremque
+            officia blanditiis fuga et numquam labore reiciendis voluptas quis repellat quos sunt non dolore consectetur at sit nam tenetur dolorem',
+            'name' => 'Quibusdam');
+
+            array_push($table_contents, $item);
+        }
+
+        return array('table' => $table_contents);
+    }
 }

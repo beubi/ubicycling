@@ -1,0 +1,68 @@
+{% extends 'BeubiDemoBundle::layout.html.twig' %}
+
+{% block demo_form %}<li class="active"><a href="{{ path('demo_form') }}">Demo Form</a></li>{% endblock %}
+
+{% block content %}
+
+<header id="head" class="secondary"></header>
+
+	<!-- container -->
+	<div class="container">
+		
+		<ol class="breadcrumb">
+			<li><a href="{{ path('home') }}">Home</a></li>
+			<li class="active">Demo Form</li>
+		</ol>
+
+		<div class="row">
+			
+			<!-- Sidebar -->
+			<aside class="col-md-2 sidebar sidebar-left">
+
+				<div class="row widget">
+					<div class="col-xs-12">
+						<h4>Lorem ipsum dolor sit</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, ratione delectus reiciendis nulla nisi pariatur molestias animi eos repellat? Vel.</p>
+					</div>
+				</div>
+
+			</aside>
+			<!-- /Sidebar -->
+
+			<!-- Article main content -->
+			<article class="col-md-10 maincontent">
+
+				<header class="page-header">
+					<h1 class="page-title">Form Table</h1>
+				</header>
+
+				<table class="table table-hover table-striped">
+					<thead>
+						<th>Id</th>
+						<th>Name</th>
+						<th>Description</th>
+					</thead>
+					<tbody>
+					{% for item in table %}
+						<tr>
+							<td>{{ item.id }}</td>
+							<td>{{ item.name }}</td>
+							<td>{{ item.description }}</td>
+						</tr>
+					{% endfor %}
+					</tbody>
+				</table>
+
+				<header class="page-header">
+					<h1 class="page-title">Lorem ipsum dolor sit amet, consectetur.</h1>
+				</header>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, itaque, cumque, maxime obcaecati reprehenderit ea dignissimos amet voluptatem id excepturi facilis totam veritatis maiores eveniet neque explicabo temporibus quisquam in ex ab fugiat ipsa tempore sunt corporis nostrum quam illum!</p>
+				<p>Consectetur cupiditate labore repudiandae beatae nisi fugiat facilis natus illum vitae doloremque. In, perspiciatis, natus, impedit voluptas itaque odio repudiandae placeat nisi totam repellendus earum dolores mollitia tempore quasi beatae alias cum dicta maxime laborum corporis harum porro magnam laboriosam.</p>
+				<p>Aut, eaque, minus atque alias odio mollitia cum nisi ipsa nulla natus quae minima similique ipsam aspernatur molestias animi in deleniti nam. Tempora, labore, modi eum perspiciatis doloremque sequi nam illo corporis iusto maiores nisi recusandae repellat animi reiciendis accusamus.</p>
+			</article>
+			<!-- /Article -->
+
+		</div>
+	</div>	<!-- /container -->
+
+{% endblock %}
