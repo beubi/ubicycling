@@ -62,8 +62,6 @@ Vagrant.configure('2') do |config|
   end
 
   config.vm.provider :lxc do |lxc, override|
-    override.vm.box = "fgrehm/trusty64-lxc"
-    override.vm.box_url = "https://vagrantcloud.com/fgrehm/trusty64-lxc"
     override.vm.hostname = 'sf2-demo-container'
     override.vm.synced_folder '.', '/srv/sf2-demo/current'
     lxc.customize 'cgroup.memory.limit_in_bytes', '1536M'
