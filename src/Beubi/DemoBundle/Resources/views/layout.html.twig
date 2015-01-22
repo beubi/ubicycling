@@ -26,22 +26,34 @@
         <div class="container">
             <div class="navbar-header">
                 <!-- Button for smallest screens -->
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                <a class="navbar-brand" href="index.html"><img src="{{ asset('bundles/beubidemo/images/logo.png') }}" alt="Progressus HTML5 template"></a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{{ path('home') }}">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="{{ asset('bundles/beubidemo/images/logo2.png') }}" alt="Demo template">
+                    </div>
+                    <div class="col-md-8">
+                        <span style="color: #68be0a; font-size: 22px; margin-left: -16px; ">be.ubi</span>
+                        <span style="color: white; font-size: 22px; ">demo</span>
+                    </div>
+                </div>
+                </a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav pull-right">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="about.html">About</a></li>
+                    {% block home %}<li><a href="{{ path('home') }}">Home</a></li>{% endblock %}
+                    {% block about %}<li><a href="{{ path('about') }}">About</a></li>{% endblock %}
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">More Pages <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="sidebar-left.html">Left Sidebar</a></li>
-                            <li class="active"><a href="sidebar-right.html">Right Sidebar</a></li>
+                            {% block sidebar_left %}<li><a href="{{ path('sidebar_left') }}">Left Sidebar</a></li>{% endblock %}
+                            {% block sidebar_right %}<li><a href="{{ path('sidebar_right') }}">Right Sidebar</a></li>{% endblock %}
                         </ul>
                     </li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a class="btn" href="signin.html">SIGN IN / SIGN UP</a></li>
+                    {% block contact %}<li><a href="{{ path('contacts') }}">Contact</a></li>{% endblock %}
+                    {% block signin %}<li><a class="btn" href="{{ path('signin') }}">Sign In / Sign Up</a></li>{% endblock %}
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
@@ -100,11 +112,11 @@
                     <div class="col-md-6 widget">
                         <div class="widget-body">
                             <p class="simplenav">
-                                <a href="#">Home</a> |
-                                <a href="about.html">About</a> |
-                                <a href="sidebar-right.html">Sidebar</a> |
-                                <a href="contact.html">Contact</a> |
-                                <b><a href="signup.html">Sign up</a></b>
+                                <a href="{{ path('home') }}">Home</a> |
+                                <a href="{{ path('about') }}">About</a> |
+                                <a href="{{ path('sidebar_right') }}">Sidebar</a> |
+                                <a href="{{ path('contacts') }}">Contact</a> |
+                                <b><a href="{{ path('signup') }}">Sign up</a></b>
                             </p>
                         </div>
                     </div>
@@ -128,6 +140,8 @@
     <!-- jQuery (necessary for Bootstraps JavaScript plugins) -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=&amp;sensor=false&amp;extension=.js"></script>
+
 
     <!-- Include all JavaScripts, compiled by Assetic -->
     {% javascripts 'bundles/beubidemo/js/*' %}
