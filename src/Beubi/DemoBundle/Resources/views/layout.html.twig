@@ -43,17 +43,17 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav pull-right">
-                    {#{% block home %}<li><a href="{{ path('home') }}">Home</a></li>{% endblock %}#}
-                    {#{% block about %}<li><a href="{{ path('about') }}">About</a></li>{% endblock %}#}
-                    {#<li class="dropdown">#}
-                        {#<a href="#" class="dropdown-toggle" data-toggle="dropdown">More Pages <b class="caret"></b></a>#}
-                        {#<ul class="dropdown-menu">#}
-                            {#{% block sidebar_left %}<li><a href="{{ path('sidebar_left') }}">Left Sidebar</a></li>{% endblock %}#}
-                            {#{% block sidebar_right %}<li><a href="{{ path('sidebar_right') }}">Right Sidebar</a></li>{% endblock %}#}
-                        {#</ul>#}
-                    {#</li>#}
-                    {#{% block contact %}<li><a href="{{ path('contacts') }}">Contact</a></li>{% endblock %}#}
-                    {#{% block signin %}<li><a class="btn" href="{{ path('signin') }}">Sign In / Sign Up</a></li>{% endblock %}#}
+                    {% block home %}<li><a href="{{ path('home') }}">Home</a></li>{% endblock %}
+                    {% block about %}<li><a href="{{ path('about') }}">About</a></li>{% endblock %}
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">More Pages <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            {% block sidebar_left %}<li><a href="{{ path('sidebar_left') }}">Left Sidebar</a></li>{% endblock %}
+                            {% block sidebar_right %}<li><a href="{{ path('sidebar_right') }}">Right Sidebar</a></li>{% endblock %}
+                        </ul>
+                    </li>
+                    {% block contact %}<li><a href="{{ path('contacts') }}">Contact</a></li>{% endblock %}
+                    {% block signin %}<li><a class="btn" href="{{ path('signin') }}">Sign In / Sign Up</a></li>{% endblock %}
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
@@ -112,11 +112,11 @@
                     <div class="col-md-6 widget">
                         <div class="widget-body">
                             <p class="simplenav">
-                                {#<a href="{{ path('home') }}">Home</a> |#}
-                                {#<a href="{{ path('about') }}">About</a> |#}
-                                {#<a href="{{ path('sidebar_right') }}">Sidebar</a> |#}
-                                {#<a href="{{ path('contacts') }}">Contact</a> |#}
-                                {#<b><a href="{{ path('signup') }}">Sign up</a></b>#}
+                                <a href="{{ path('home') }}">Home</a> |
+                                <a href="{{ path('about') }}">About</a> |
+                                <a href="{{ path('sidebar_right') }}">Sidebar</a> |
+                                <a href="{{ path('contacts') }}">Contact</a> |
+                                <b><a href="{{ path('signup') }}">Sign up</a></b>
                             </p>
                         </div>
                     </div>
@@ -128,7 +128,6 @@
                             </p>
                         </div>
                     </div>
-
                 </div> <!-- /row of widgets -->
             </div>
         </div>
