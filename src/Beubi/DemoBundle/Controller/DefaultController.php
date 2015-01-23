@@ -14,7 +14,7 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        return array();
+        return $this->redirect($this->generateUrl('demo_form', array()));
     }
 
     /**
