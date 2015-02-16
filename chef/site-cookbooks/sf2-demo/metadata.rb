@@ -1,0 +1,16 @@
+name             'sf2-demo'
+maintainer       'Ubiprism Lda.'
+maintainer_email 'contact@beubi.com'
+license          'All rights reserved'
+description      'Installs/Configures Symfony 2 project'
+long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
+version          '1.0.0'
+
+depends 'apt', '2.4.0'
+depends 'build-essential', '2.0.2'
+depends 'git', '4.0.2'
+depends 'apache2'
+depends 'php'
+depends 'database', '2.2.0'
+depends 'symfony2'
+depends 'composer', '1.0.1'
