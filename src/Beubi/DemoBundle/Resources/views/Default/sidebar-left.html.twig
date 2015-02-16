@@ -1,5 +1,6 @@
 {% extends 'BeubiDemoBundle::layout.html.twig' %}
 
+{% block sidebar_toggle %}active {% endblock %}
 {% block sidebar_left %}<li class="active"><a href="{{ path('sidebar_left') }}">Left Sidebar</a></li>{% endblock %}
 
 {% block content %}
