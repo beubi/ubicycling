@@ -6,7 +6,6 @@ DEPENDENCIES
     git: https://github.com/Restless-ET/chef-php-extra.git
     revision: 29b039de32cdfd424dc041c3d5603905518fc1b2
   locales
-  mysql-chef_gem (= 0.0.5)
   php
     git: https://github.com/beubi/cookbook-php.git
     revision: 7e2e6c846df4c54f323a1cbf60f13e561b43562f
@@ -58,11 +57,11 @@ GRAPH
   iptables (0.14.1)
   locales (0.3.1)
   logrotate (1.7.0)
-  mysql (5.3.6)
+  mysql (6.0.13)
+    smf (>= 0.0.0)
     yum-mysql-community (>= 0.0.0)
-  mysql-chef_gem (0.0.5)
+  mysql-chef_gem (1.0.0)
     build-essential (>= 0.0.0)
-    mysql (>= 0.0.0)
   openssl (2.0.2)
     chef-sugar (>= 0.0.0)
   pacman (1.1.1)
@@ -77,6 +76,8 @@ GRAPH
     apt (>= 1.9.0)
     build-essential (>= 0.0.0)
     openssl (>= 0.0.0)
+  rbac (1.0.2)
+  resource-control (0.1.1)
   runit (1.5.14)
     build-essential (>= 0.0.0)
     yum (~> 3.0)
@@ -88,9 +89,11 @@ GRAPH
     composer (= 1.0.1)
     database (= 2.2.0)
     git (= 4.0.2)
-    mysql (= 5.3.6)
     php (>= 0.0.0)
     symfony2 (>= 0.0.0)
+  smf (2.2.1)
+    rbac (>= 1.0.1)
+    resource-control (>= 0.0.0)
   symfony2 (0.0.1)
     apache2 (>= 0.0.0)
     php (>= 0.0.0)

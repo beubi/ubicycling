@@ -7,7 +7,6 @@ cookbook 'sf2-demo', path: root+"/chef/site-cookbooks/sf2-demo"
 cookbook 'timezone-ii'
 cookbook 'locales'
 cookbook 'vim', '1.1.2'
-cookbook 'mysql-chef_gem', '0.0.5'
 cookbook 'unattended-upgrades', git: 'https://github.com/beubi/chef-unattended-upgrades.git'
 cookbook 'apache2', git: 'https://github.com/arturmelo/apache2.git'
 cookbook 'php', git: 'https://github.com/beubi/cookbook-php.git'

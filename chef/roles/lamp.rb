@@ -5,12 +5,8 @@ run_list(
   'recipe[apache2]',
   'recipe[php]',
   'recipe[apache2::mod_php5]',
-  #'recipe[apache2::mod_ssl]',
-  'recipe[php::module_mysql]',
   'recipe[php::module_curl]',
   'recipe[php::module_gd]',
-  'recipe[mysql::client]',
-  'recipe[mysql::server]',
   'recipe[symfony2]',
   'recipe[composer]',
 )

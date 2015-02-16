@@ -29,14 +29,6 @@ Vagrant.configure('2') do |config|
     chef.cookbooks_path = [ 'chef/cookbooks', 'chef/site-cookbooks' ]
     chef.roles_path = 'chef/roles'
     chef.json = {
-      'mysql' => {
-        'database_server_host' => 'localhost',
-        'database_name' => 'sf2-demo',
-        'database_user' => 'sf2-demo',
-        'database_password' => 'trafil0sf2-demo',
-        'server_root_password' => 'trafil0mysql',
-        'bind_address' => '127.0.0.1'
-      },
       'project_base_path' => '/srv/sf2-demo',
       'project_user' => 'ubuntu',
       'instance_role' => 'vagrant'
@@ -46,7 +38,6 @@ Vagrant.configure('2') do |config|
       'role[lamp]',
       'recipe[symfony2]',
       'recipe[composer]',
-      'recipe[sf2-demo::database_privileges]',
       'recipe[sf2-demo::virtualhost]',
       'recipe[chef-php-extra::xdebug]',
     ]
