@@ -4,7 +4,7 @@ parameters:
     database_host:     127.0.0.1
     database_port:     ~
     database_name:     sf2-demo
-    database_user:     ****
+    database_user:     x123
     database_password:
     # You should uncomment this if you want use pdo_sqlite
     # database_path: "%kernel.root_dir%/data.db3"
