@@ -5,6 +5,7 @@ namespace Beubi\DemoBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends Controller
 {
@@ -75,7 +76,7 @@ class DefaultController extends Controller
      * @Route("/workouts", name="workouts")
      * @Template("BeubiDemoBundle:Default:workouts.html.twig")
      */
-    public function workoutsAction()
+    public function workoutsAction(Request $request)
     {
         $table_contents = array();
 
@@ -199,6 +200,15 @@ class DefaultController extends Controller
             'description' => 'Endurance ride in the L2/L3 zones and some L4 in the climbs.');
         array_push($table_contents, $item);
 
-        return array('table' => array_reverse($table_contents));
+        $table_contents = array_reverse($table_contents);
+
+        $paginator  = $this->get('knp_paginator');
+        $pagination = $paginator->paginate(
+            $table_contents,
+            $request->query->get('page', 1)/*page number*/,
+            7/*limit per page*/
+        );
+
+        return array('table' => $pagination);
     }
 }

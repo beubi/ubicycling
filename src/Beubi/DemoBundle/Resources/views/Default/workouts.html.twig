@@ -21,8 +21,18 @@
 
 				{#<div class="row widget">#}
 					{#<div class="col-xs-12">#}
-						{#<h4>Lorem ipsum dolor sit</h4>#}
-						{#<p>Very complex form with lots of information!</p>#}
+						{#<h4>Search Filters</h4>#}
+						{#<form>#}
+							{#<div class="row">#}
+								{#<div class="col-lg-11">#}
+									{#<input type="text" class="form-control" placeholder="Search by Title or Description">#}
+
+								{#</div>#}
+								{#<div class="col-lg-1" style="padding-top: 7px; margin-left: -50px;">#}
+									{#<i class="fa fa-search"></i>#}
+								{#</div>#}
+							{#</div>#}
+						{#</form>#}
 					{#</div>#}
 				{#</div>#}
 
@@ -32,6 +42,9 @@
 			<!-- Article main content -->
 			<article class="col-md-12 maincontent">
 
+				<div class="count">
+					Total Items: {{ table.getTotalItemCount }}
+				</div>
 				<header class="page-header">
 					<h1 class="page-title">Latest Workouts</h1>
 				</header>
@@ -56,6 +69,9 @@
 					{% endfor %}
 					</tbody>
 				</table>
+				<div class="navigation text-center">
+					{{ knp_pagination_render(table) }}
+				</div>
 
 			</article>
 			<!-- /Article -->
