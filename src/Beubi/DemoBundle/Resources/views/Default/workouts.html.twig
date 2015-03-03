@@ -18,13 +18,7 @@
 			
 			<!-- Sidebar -->
 			{#<aside class="col-md-3 sidebar sidebar-left">#}
-
-				{#<div class="row widget">#}
-					{#<div class="col-xs-12">#}
-						{#<h4>Lorem ipsum dolor sit</h4>#}
-						{#<p>Very complex form with lots of information!</p>#}
-					{#</div>#}
-				{#</div>#}
+				{##}
 
 			{#</aside>#}
 			<!-- /Sidebar -->
@@ -43,6 +37,7 @@
 						<th>Distance</th>
 						<th>Duration</th>
 						<th>Description</th>
+						<th>Calories</th>
 					</thead>
 					<tbody>
 					{% for item in table %}
@@ -52,6 +47,7 @@
 							<td>{{ item.distance }} Km</td>
 							<td>{{ item.duration }}</td>
 							<td>{{ item.description }}</td>
+							<td>{{ item.calories }} Kcal</td>
 						</tr>
 					{% endfor %}
 					</tbody>
