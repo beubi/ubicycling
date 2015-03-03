@@ -44,6 +44,9 @@
         ]
     },
     "config": {
+        "github-oauth": {
+          "github.com": "bdcedcc8525d6719e7557e136eb35f4f0e549554"
+        },
         "bin-dir": "bin",
         "component-dir": "web/components"
     },
