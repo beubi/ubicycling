@@ -46,6 +46,7 @@ Vagrant.configure('2') do |config|
   config.vm.provider :virtualbox do |vb, override|
     nfs_setting = RUBY_PLATFORM =~ /darwin/ || RUBY_PLATFORM =~ /linux/
     override.vm.synced_folder '.', '/srv/sf2-demo/current', :nfs => nfs_setting
+    
     # The LXC provider doesn't support any of the Vagrant public / private network configurations
     override.vm.network :private_network, ip: '10.11.12.9'
     vb.customize ['modifyvm', :id, '--memory', 1536]
