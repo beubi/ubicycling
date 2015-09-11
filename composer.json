@@ -11,6 +11,7 @@
         "symfony/symfony": "2.6.*",
         "doctrine/orm": "~2.2,>=2.2.3",
         "doctrine/doctrine-bundle": "~1.2",
+        "twig/twig": "1.20.0",
         "twig/extensions": "~1.0",
         "symfony/assetic-bundle": "~2.3",
         "symfony/swiftmailer-bundle": "~2.3",
@@ -45,7 +46,7 @@
     },
     "config": {
         "github-oauth": {
-          "github.com": "bdcedcc8525d6719e7557e136eb35f4f0e549554"
+          "github.com": "9dc36ddd9c8ade7ac974365cc08e42a0fac6ceef"
         },
         "bin-dir": "bin",
         "component-dir": "web/components"
