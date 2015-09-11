@@ -24,6 +24,7 @@ class DefaultController extends Controller
      */
     public function contactsAction()
     {
+
         return array();
     }
 
@@ -33,7 +34,8 @@ class DefaultController extends Controller
      */
     public function aboutAction()
     {
-        return array();
+        
+       return array();
     }
 
     /**
