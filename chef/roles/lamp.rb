@@ -23,6 +23,14 @@ override_attributes(
     'post_max_size' => '30M',
     'upload_max_filesize' => '30M'
   },
+  'apache' => {
+    'mpm' => 'prefork',
+    'prefork' => {
+      'startservers' => 10,
+      'minspareservers' => 2,
+      'maxspareservers' => 5
+    },
+  },
   'php_apache2' => {
     'short_open_tag' => 'Off',
     'max_execution_time' => '600',
