@@ -2,6 +2,7 @@ name 'lamp'
 description 'Common LAMP configuration for PHP development'
 
 run_list(
+  'recipe[sf2-demo::php5_6]',
   'recipe[apache2]',
   'recipe[php]',
   'recipe[apache2::mod_php5]',

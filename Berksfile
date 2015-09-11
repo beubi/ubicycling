@@ -5,7 +5,7 @@ root = File.expand_path(File.dirname(__FILE__))
 cookbook 'sf2-demo', path: root+"/chef/site-cookbooks/sf2-demo"
 
 cookbook 'timezone-ii'
-cookbook 'locales'
+cookbook 'locales', git: 'https://github.com/redguide/locales.git'
 cookbook 'vim', '1.1.2'
 cookbook 'unattended-upgrades', git: 'https://github.com/beubi/chef-unattended-upgrades.git'
 cookbook 'apache2', git: 'https://github.com/arturmelo/apache2.git'
