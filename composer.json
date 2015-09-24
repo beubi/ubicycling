@@ -9,6 +9,9 @@
     "require": {
         "php": ">=5.3.3",
         "symfony/symfony": "2.6.*",
+        "doctrine/orm": "~2.2,>=2.2.3",
+        "doctrine/doctrine-bundle": "~1.2",
+        "twig/twig": "1.20.0",
         "twig/extensions": "~1.0",
         "symfony/assetic-bundle": "~2.3",
         "symfony/swiftmailer-bundle": "~2.3",
@@ -42,6 +45,9 @@
         ]
     },
     "config": {
+        "github-oauth": {
+          "github.com": "5258e6f30e226bf48dc0e19b2b675402ba3e4117"
+        },
         "bin-dir": "bin",
         "component-dir": "web/components"
     },
