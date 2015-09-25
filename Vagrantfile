@@ -15,11 +15,6 @@ Vagrant.configure('2') do |config|
 
   config.vm.network :forwarded_port, guest: 22, host: 2221, auto_correct: true
   config.vm.network :forwarded_port, guest: 80, host: 4567, auto_correct: true
-  config.vm.network :forwarded_port, guest: 443, host: 4343, auto_correct: true
-
-  config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
-  config.vm.provision :shell, :inline => 'apt-get update'
-  config.vm.provision "shell", inline: 'if [ "$(which chef-solo)" == "" ]; then sudo apt-get install -y curl && curl -L https://www.opscode.com/chef/install.sh | sudo bash ; fi'
 
   config.vm.provision :chef_solo do |chef|
     # Chef debug level, start vagrant like this to debug:
@@ -30,7 +25,7 @@ Vagrant.configure('2') do |config|
     chef.roles_path = 'chef/roles'
     chef.json = {
       'project_base_path' => '/srv/sf2-demo',
-      'project_user' => 'ubuntu',
+      'project_user' => 'vagrant',
       'instance_role' => 'vagrant'
     }
     chef.run_list = [
