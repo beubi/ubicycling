@@ -24,6 +24,7 @@ class DefaultController extends Controller
      */
     public function contactsAction()
     {
+
         return array();
     }
 
@@ -33,7 +34,8 @@ class DefaultController extends Controller
      */
     public function aboutAction()
     {
-        return array();
+        
+       return array();
     }
 
     /**
@@ -114,6 +116,7 @@ class DefaultController extends Controller
             'duration' => '1:31:00',
             'calories' => 754,
             'description' => 'Easy recovery ride.');
+        
         array_push($table_contents, $item);
 
         $item = array(

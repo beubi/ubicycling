@@ -2,6 +2,7 @@ name 'lamp'
 description 'Common LAMP configuration for PHP development'
 
 run_list(
+  'recipe[sf2-demo::php5_6]',
   'recipe[apache2]',
   'recipe[php]',
   'recipe[apache2::mod_php5]',
@@ -21,6 +22,14 @@ override_attributes(
     'use_syslog' => true,
     'post_max_size' => '30M',
     'upload_max_filesize' => '30M'
+  },
+  'apache' => {
+    'mpm' => 'prefork',
+    'prefork' => {
+      'startservers' => 10,
+      'minspareservers' => 2,
+      'maxspareservers' => 5
+    },
   },
   'php_apache2' => {
     'short_open_tag' => 'Off',
