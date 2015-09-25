@@ -24,6 +24,7 @@ class DefaultController extends Controller
      */
     public function contactsAction()
     {
+
         return array();
     }
 
@@ -33,7 +34,8 @@ class DefaultController extends Controller
      */
     public function aboutAction()
     {
-        return array();
+        
+       return array();
     }
 
     /**
@@ -110,6 +112,7 @@ class DefaultController extends Controller
             'date' => '30/01/2015 09:00',
             'duration' => '1:31:00',
             'description' => 'Easy recovery ride.');
+        
         array_push($table_contents, $item);
 
         $item = array(
