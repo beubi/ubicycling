@@ -7,9 +7,7 @@ run_list(
   'recipe[php]',
   'recipe[apache2::mod_php5]',
   'recipe[php::module_curl]',
-  'recipe[php::module_gd]',
-  'recipe[symfony2]',
-  'recipe[composer]',
+  'recipe[php::module_gd]'
 )
 
 override_attributes(
