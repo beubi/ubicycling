@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: sf2-demo
+# Cookbook Name:: ubicycling
 # Recipe:: php5_6
 #
 # Copyright 2015, Ubiprism Lda.
