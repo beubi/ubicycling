@@ -10,11 +10,11 @@ class DefaultController extends Controller
 {
     /**
      * @Route("/", name="home")
-     * @Template()
+     * @Template("BeubiDemoBundle:Default:index.html.twig")
      */
     public function indexAction()
     {
-        return $this->redirect($this->generateUrl('workouts', array()));
+        return array();
     }
 
     /**
