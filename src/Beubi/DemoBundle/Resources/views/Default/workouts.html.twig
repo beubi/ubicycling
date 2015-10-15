@@ -43,6 +43,7 @@
 						<th>Distance</th>
 						<th>Duration</th>
 						<th>Description</th>
+						<th>Calories</th>
 					</thead>
 					<tbody>
 					{% for item in workouts %}
@@ -52,6 +53,7 @@
 							<td>{{ item.distance }} Km</td>
 							<td>{{ item.duration }}</td>
 							<td>{{ item.description }}</td>
+							<td>{{ item.calories }} Kcal</td>
 						</tr>
 					{% endfor %}
 					</tbody>
