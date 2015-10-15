@@ -45,10 +45,10 @@
 						<th>Description</th>
 					</thead>
 					<tbody>
-					{% for item in table %}
+					{% for item in workouts %}
 						<tr>
 							<td>{{ item.title }}</td>
-							<td>{{ item.date }}</td>
+							<td>{{ item.timestamp | date }}</td>
 							<td>{{ item.distance }} Km</td>
 							<td>{{ item.duration }}</td>
 							<td>{{ item.description }}</td>
