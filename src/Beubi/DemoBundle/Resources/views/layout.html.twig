@@ -54,7 +54,6 @@
                     {#</li>#}
                     {% block contact %}<li><a href="{{ path('contacts') }}">Contacts</a></li>{% endblock %}
                     {% block about %}<li><a href="{{ path('about') }}">About</a></li>{% endblock %}
-                    {% block signin %}<li><a class="btn" href="{{ path('signin') }}">Sign In / Sign Up</a></li>{% endblock %}
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
@@ -70,65 +69,35 @@
         <div class="footer1">
             <div class="container">
                 <div class="row">
+                    <div class="col-md-4 widget text-center">
+                        <h3 class="widget-title">Follow us</h3>
+                        <div class="widget-body text-center">
+                            <p class="follow-me-icons text-center">
+                                <a href="https://www.facebook.com/beubi-107459612625103/"><i class="fa fa-facebook fa-2"></i></a>
+                                <a href=""><i class="fa fa-twitter fa-2"></i></a>
+                                <a href=""><i class="fa fa-github fa-2"></i></a>
+                            </p>
+                        </div>
+                    </div>
 
-                    <div class="col-md-3 widget">
+                    <div class="col-md-4 widget text-center">
+                        <div class="widget-body">
+                            <p class="text-center">
+                                Copyright &copy; 2015, <a href="http://beubi.com/" rel="designer">be.ubi</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 widget text-center">
                         <h3 class="widget-title">Contact</h3>
                         <div class="widget-body">
-                            <p>+234 23 9873237<br>
-                                <a href="mailto:#">some.email@somewhere.com</a><br>
+                            <p>(+351) 234 380 315<br>
+                                <a href="mailto:#">contact@beubi.com</a><br>
                                 <br>
-                                234 Hidden Pond Road, Ashland City, TN 37015
                             </p>
                         </div>
                     </div>
 
-                    <div class="col-md-3 widget">
-                        <h3 class="widget-title">Follow me</h3>
-                        <div class="widget-body">
-                            <p class="follow-me-icons">
-                                <a href=""><i class="fa fa-twitter fa-2"></i></a>
-                                <a href=""><i class="fa fa-dribbble fa-2"></i></a>
-                                <a href=""><i class="fa fa-github fa-2"></i></a>
-                                <a href=""><i class="fa fa-facebook fa-2"></i></a>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 widget">
-                        <h3 class="widget-title">Text widget</h3>
-                        <div class="widget-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, dolores, quibusdam architecto voluptatem amet fugiat nesciunt placeat provident cumque accusamus itaque voluptate modi quidem dolore optio velit hic iusto vero praesentium repellat commodi ad id expedita cupiditate repellendus possimus unde?</p>
-                            <p>Eius consequatur nihil quibusdam! Laborum, rerum, quis, inventore ipsa autem repellat provident assumenda labore soluta minima alias temporibus facere distinctio quas adipisci nam sunt explicabo officia tenetur at ea quos doloribus dolorum voluptate reprehenderit architecto sint libero illo et hic.</p>
-                        </div>
-                    </div>
-
-                </div> <!-- /row of widgets -->
-            </div>
-        </div>
-
-        <div class="footer2">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-md-6 widget">
-                        <div class="widget-body">
-                            <p class="simplenav">
-                                <a href="{{ path('home') }}">Home</a> |
-                                <a href="{{ path('about') }}">About</a> |
-                                <a href="{{ path('sidebar_right') }}">Sidebar</a> |
-                                <a href="{{ path('contacts') }}">Contact</a> |
-                                <b><a href="{{ path('signup') }}">Sign up</a></b>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 widget">
-                        <div class="widget-body">
-                            <p class="text-right">
-                                Copyright &copy; 2015, <a href="http://beubi.com/" rel="designer">Ubiprism</a>
-                            </p>
-                        </div>
-                    </div>
                 </div> <!-- /row of widgets -->
             </div>
         </div>

@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: sf2-demo
+# Cookbook Name:: ubicycling
 # Recipe:: virtualhost
 #
 # Copyright 2015, Ubiprism Lda.
@@ -13,9 +13,9 @@ apache_site "000-default" do
   enable false
 end
 
-web_app "sf2-demo" do
-  template "sf2-demo.conf.erb"
+web_app "ubicycling" do
+  template "ubicycling.conf.erb"
   server_name node['hostname'] # we should change this to reflect the actual username
-  server_aliases [node['fqdn'], "sf2-demo.lh.ubiprism.pt", "sf2-demo.local"]
+  server_aliases [node['fqdn'], "ubicycling.lh.ubiprism.pt", "ubicycling.ubiprism.pt"]
   docroot node['project_base_path'] + "/current/web"
 end

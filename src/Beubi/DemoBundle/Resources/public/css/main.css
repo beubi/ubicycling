@@ -1,5 +1,5 @@
 /* Header */
-#head { background:#181015 url(../images/bg_header2.jpg) no-repeat; background-size: cover; min-height:520px; text-align: center; padding-top:240px; color:white; font-family:"Open sans", Helvetica, Arial; font-weight:300; }
+#head { background:#181015 url(../images/ubic-header.jpg) no-repeat; background-size: cover; background-position: 0 -275px; min-height:520px; text-align: center; padding-top:140px; color:white; font-family:"Open sans", Helvetica, Arial; font-weight:300; }
 #head.secondary { height:100px; min-height: 100px; padding-top:0px; }
 #head .lead { font-family:"Open sans", Helvetica, Arial; font-size:44px; margin-bottom:6px; color:white; line-height:1.15em; }
 #head .tagline { color:rgba(255,255,255,0.75); margin-bottom:25px; }
@@ -70,7 +70,7 @@ img.pull-left { margin-right: 10px; }
 .footer1 .entry-meta a { color: #333333; }
 .footer1 .entry-meta .meta-in { border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; padding: 10px 0; }
 .follow-me-icons { font-size:30px; }
-.follow-me-icons i { float:left; margin:0 10px 0 0; }
+.follow-me-icons i { margin:0 10px 0 0; }
 
 .footer2 { background: #191919; padding: 15px 0; color: #777; font-size: 12px; }
 .footer2 a { color: #aaa; }

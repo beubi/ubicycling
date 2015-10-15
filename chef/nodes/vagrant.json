@@ -1,0 +1,18 @@
+{
+    "mysql": {
+        "database_server_host": "localhost",
+        "database_name": "ubicycling",
+        "database_user": "ubicycling",
+        "database_password": "qwe123",
+        "bind_address": "127.0.0.1"
+    },
+    "project_base_path": "/srv/ubicycling",
+    "project_user": "vagrant",
+    "instance_role": "vagrant",
+    "run_list": [
+        "role[base]",
+        "role[lamp]",
+        "role[ubicycling]",
+        "recipe[chef-php-extra::xdebug]"
+    ]
+}
