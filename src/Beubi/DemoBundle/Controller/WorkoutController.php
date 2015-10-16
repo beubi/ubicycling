@@ -35,7 +35,7 @@ class WorkoutController extends Controller
     /**
      * Creates a new Workout entity.
      *
-     * @Route("/", name="workout_create")
+     * @Route("/create", name="workout_create")
      * @Method("POST")
      * @Template("BeubiDemoBundle:Workout:new.html.twig")
      */
@@ -50,7 +50,7 @@ class WorkoutController extends Controller
             $em->persist($entity);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('workouts', array('id' => $entity->getId())));
+            return $this->redirect($this->generateUrl('workouts'));
         }
 
         return array(

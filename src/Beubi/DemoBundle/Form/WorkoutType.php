@@ -15,8 +15,8 @@ class WorkoutType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('title')
-            ->add('distance')
+            ->add('title', 'text')
+            ->add('distance', 'number')
             ->add('description', 'textarea', array('required' => false))
             ->add('timestamp', 'datetime')
             ->add('duration', 'text', array('required' => true))
