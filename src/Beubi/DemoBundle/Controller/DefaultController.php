@@ -72,19 +72,4 @@ class DefaultController extends Controller
     {
         return array();
     }
-
-    /**
-     * @Route("/workouts", name="workouts")
-     * @Template("BeubiDemoBundle:Default:workouts.html.twig")
-     */
-    public function workoutsAction()
-    {
-        $em = $this->getDoctrine();
-
-        $workouts = $em->getRepository('BeubiDemoBundle:Workout')->findAll();
-
-        return array(
-            'workouts' => $workouts,
-        );
-    }
 }
