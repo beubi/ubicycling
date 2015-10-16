@@ -48,7 +48,7 @@
 
                     {% block contact %}<li><a href="{{ path('contacts') }}">Contacts</a></li>{% endblock %}
                     {#{% block about %}<li><a href="{{ path('about') }}">About</a></li>{% endblock %}#}
-                    {% block about %}<li><a href="{{ path('about') }}">About</a></li>{% endblock %}
+                    {#{% block about %}<li><a href="{{ path('about') }}">About</a></li>{% endblock %}#}
                     {% block signin %}
                         {% if app.user is not null and is_granted('IS_AUTHENTICATED_FULLY') %}
                             <li class="dropdown  {% block sidebar_toggle %} {% endblock %}">
