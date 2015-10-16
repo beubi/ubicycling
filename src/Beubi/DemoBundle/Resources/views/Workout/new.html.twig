@@ -20,8 +20,9 @@
             <article class="col-md-12 maincontent">
                 {{ form_start(form, { 'style': 'horizontal' }) }}
                 <br />
+                <div class="hidden">
                 {{ form_row(form.timestamp, { 'attr': {'class': ''} }) }}
-                <br />
+                </div>
                 {{ form_row(form.title, { 'attr': {'class': 'form-control', 'placeholder' : 'Workout title'} }) }}
                 <br />
                 {{ form_row(form.distance, { 'attr': {'class': 'form-control', 'placeholder' : 'Distance in KM'} }) }}

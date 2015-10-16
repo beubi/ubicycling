@@ -46,6 +46,8 @@ class WorkoutController extends Controller
         $form->handleRequest($request);
 
         if ($form->isValid()) {
+            $entity->setTimestamp(new \DateTime());
+
             $em = $this->getDoctrine()->getManager();
             $em->persist($entity);
             $em->flush();
