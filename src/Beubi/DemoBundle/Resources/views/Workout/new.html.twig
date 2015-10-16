@@ -13,18 +13,22 @@
             <li><a href="{{ path('home') }}">Home</a></li>
             <li class="active">New Workout</li>
         </ol>
-
+        <br />
         <div class="row">
 
             <!-- Article main content -->
             <article class="col-md-12 maincontent">
                 {{ form_start(form, { 'style': 'horizontal' }) }}
-                {{ form_row(form.title, { 'attr': {'class': 'form-control'} }) }}
-                {{ form_row(form.distance, { 'attr': {'class': 'form-control'} }) }}
-                {{ form_row(form.duration, { 'attr': {'class': 'form-control'} }) }}
-                {{ form_row(form.timestamp, { 'attr': {'class': 'form-control'} }) }}
-                <br /><br />
-                {{ form_row(form.description, { 'attr': {'class': 'form-control'} }) }}
+                <br />
+                {{ form_row(form.timestamp, { 'attr': {'class': ''} }) }}
+                <br />
+                {{ form_row(form.title, { 'attr': {'class': 'form-control', 'placeholder' : 'Workout title'} }) }}
+                <br />
+                {{ form_row(form.distance, { 'attr': {'class': 'form-control', 'placeholder' : 'Distance in KM'} }) }}
+                <br />
+                {{ form_row(form.duration, { 'attr': {'class': 'form-control', 'placeholder' : 'HH:mm:ss'} }) }}
+                <br />
+                {{ form_row(form.description, { 'attr': {'class': 'form-control', 'placeholder' : 'Describe your workout'} }) }}
                 <br />
                 {{ form_row(form.submit, { 'attr': {'class': 'btn btn-success'} }) }}
                 {{ form_end(form) }}
