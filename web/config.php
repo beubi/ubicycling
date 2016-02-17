@@ -123,3 +123,4 @@ $minorProblems = $symfonyRequirements->getFailedRecommendations();
     </body>
     <!--This is a test comment-->
 </html>
+<!--This is one more test comment-->
