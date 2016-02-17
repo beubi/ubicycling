@@ -121,4 +121,5 @@ $minorProblems = $symfonyRequirements->getFailedRecommendations();
             <div class="version">Symfony Standard Edition</div>
         </div>
     </body>
+    <!--This is a test comment-->
 </html>
