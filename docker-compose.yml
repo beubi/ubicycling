@@ -10,7 +10,7 @@ web:
   environment:
     DATABASE_HOST: database
   volumes:
-    - .:/srv/ubicycling
+    - .:/srv/project
 
 #### Container to make easier to run console commands
 # To start an interactive sf console: "docker-compose run console"
@@ -20,7 +20,7 @@ console:
   links:
     - database
   volumes:
-    - .:/srv/ubicycling
+    - .:/srv/project
 
 
 #### Container that runs the database
