@@ -42,7 +42,7 @@ assetic:
 doctrine:
     dbal:
         driver:   pdo_mysql
-        host:     127.0.0.1
+        host:     "%database_host%"
         port:     ~
         dbname:   ubicycling
         user:     ubicycling
