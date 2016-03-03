@@ -1,0 +1,35 @@
+#### Main web server container
+# You can simply do "docker-compose run web" to start it
+#  It will also start the database
+web:
+  image: beubi/symfony2:web
+  ports:
+    - "80:80"
+  links:
+    - database
+  environment:
+    DATABASE_HOST: database
+  volumes:
+    - .:/srv/project
+
+#### Container to make easier to run console commands
+# To start an interactive sf console: "docker-compose run console"
+# To run a one-off command such as cache clear: "docker-compose run console cache:clear"
+console:
+  image: beubi/symfony2:console
+  links:
+    - database
+  volumes:
+    - .:/srv/project
+
+
+#### Container that runs the database
+# It is automatically started by docker-compose
+#  when you start another one that links to it
+database:
+  image: mysql
+  environment:
+    MYSQL_ROOT_PASSWORD: afe592de49656b627e4fc8a84dbbb032
+    MYSQL_USER: ubicycling
+    MYSQL_PASSWORD: qwe123
+    MYSQL_DATABASE: ubicycling
