@@ -57,7 +57,10 @@
         "symfony-web-dir": "web",
         "symfony-assets-install": "relative",
         "incenteev-parameters": {
-            "file": "app/config/parameters.yml"
+            "file": "app/config/parameters.yml",
+            "env-map": {
+                "database_host": "DATABASE_HOST"
+            }
         },
         "branch-alias": {
             "dev-master": "2.7-dev"
