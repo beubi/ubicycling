@@ -1,9 +1,9 @@
 DEPENDENCIES
   apache2
-    git: https://github.com/arturmelo/apache2.git
+    git: https://github.com/beubi/apache2.git
     revision: bc005a21e14ebb6748bc987fdf0bbad350084d2b
   chef-php-extra
-    git: https://github.com/Restless-ET/chef-php-extra.git
+    git: https://github.com/beubi/chef-php-extra.git
     revision: 29b039de32cdfd424dc041c3d5603905518fc1b2
   locales
     git: https://github.com/redguide/locales.git
