@@ -83,8 +83,12 @@ class DefaultController extends Controller
 
         $workouts = $em->getRepository('BeubiDemoBundle:Workout')->findAll();
 
+        $paginator  = $this->get('knp_paginator');
+        $pagination = $paginator->paginate($workouts, $this->get('request')->query->get('page', 1),
+            $this->container->getParameter('max_page_items'));
+
         return array(
-            'workouts' => $workouts,
+            'workouts' => $pagination,
         );
     }
 }
