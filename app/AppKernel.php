@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new Beubi\DemoBundle\BeubiDemoBundle(),
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle (),
+            new FOS\UserBundle\FOSUserBundle (),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
