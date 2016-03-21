@@ -31,7 +31,9 @@
 
 			<!-- Article main content -->
 			<article class="col-md-12 maincontent">
-
+                <div class="pull-right">
+                    <a href="{{ url('workout_new') }}" class="btn btn-success"><i class="fa fa-plus-circle"></i> Create Workout </a>
+                </div>
 				<header class="page-header">
 					<h1 class="page-title">Latest Workouts</h1>
 				</header>
@@ -43,7 +45,11 @@
 						<th>Distance</th>
 						<th>Duration</th>
 						<th>Description</th>
+<<<<<<< HEAD
 						<th>Calories</th>
+=======
+                        <th></th>
+>>>>>>> develop
 					</thead>
 					<tbody>
 					{% for item in workouts %}
@@ -53,7 +59,13 @@
 							<td>{{ item.distance }} Km</td>
 							<td>{{ item.duration }}</td>
 							<td>{{ item.description }}</td>
+<<<<<<< HEAD
 							<td>{{ item.calories }} Kcal</td>
+=======
+                            <td><a title="Delete Workout"
+                                   href="{{ url('workout_delete', {'id': item.id }) }}"><i class="fa fa-trash-o"></i> </a>
+                            </td>
+>>>>>>> develop
 						</tr>
 					{% endfor %}
 					</tbody>
