@@ -20,12 +20,19 @@ class WorkoutController extends Controller
     /**
      * @Route("/", name="workouts")
      * @Template("BeubiDemoBundle:Default:workouts.html.twig")
+     * @param Request $request
+     * @return array
      */
-    public function workoutsAction()
+    public function workoutsAction(Request $request)
     {
         $em = $this->getDoctrine();
+        $paginator = $this->get('knp_paginator');
 
-        $workouts = $em->getRepository('BeubiDemoBundle:Workout')->findBy(array(), array('timestamp' => 'DESC'));
+        $page = !$request->query->get('page') ? 1 : $request->query->get('page');
+
+        $query = $em->getRepository('BeubiDemoBundle:Workout')->findBy(array(), array('timestamp' => 'DESC'));
+
+        $workouts = $paginator->paginate($query, $page, 10, array('distinct' => false));
 
         return array(
             'workouts' => $workouts,
