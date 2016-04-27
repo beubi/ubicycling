@@ -24,14 +24,14 @@
 						<h4>Search Filters</h4>
 						{{ form_start(form, { 'style': 'vertical' }) }}
 						{{ form_errors(form) }}
-							<div class="row">
-								<div class="col-lg-11">
-									{{ form_widget(form.query, { 'attr': {'class': 'form-control', 'placeholder': 'Search by Title or Description'}}) }}
-								</div>
-								<div class="col-lg-1" style="padding-top: 7px; margin-left: -50px;">
-									<i class="fa fa-search"></i>
-								</div>
+						<div class="row">
+							<div class="col-lg-11">
+								{{ form_widget(form.query, { 'attr': {'class': 'form-control', 'placeholder': 'Search by Title or Description'}}) }}
 							</div>
+							<div class="col-lg-1" style="padding-top: 7px; margin-left: -50px;">
+								<i class="fa fa-search"></i>
+							</div>
+						</div>
 						{{ form_end(form) }}
 					</div>
 				</div>
@@ -40,7 +40,7 @@
 			<!-- /Sidebar -->
 
 			<!-- Article main content -->
-			<article class="col-md-12 maincontent">
+			<article class="col-md-9 maincontent">
                 <div class="pull-right">
                     <a href="{{ url('workout_new') }}" class="btn btn-success"><i class="fa fa-plus-circle"></i> Create Workout </a>
                 </div>

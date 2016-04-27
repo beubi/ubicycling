@@ -20,4 +20,7 @@ app/spool/*
 
 # Vagrant & Chef
 .vagrant
-chef/cookbooks/*
+chef/cookbooks/
+
+#inteliJ IDE(s)
+.idea/
