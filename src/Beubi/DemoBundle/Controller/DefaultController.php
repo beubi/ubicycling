@@ -72,4 +72,23 @@ class DefaultController extends Controller
     {
         return array();
     }
+
+    /**
+     * @Route("/workouts", name="workouts")
+     * @Template("BeubiDemoBundle:Default:workouts.html.twig")
+     */
+    public function workoutsAction()
+    {
+        $em = $this->getDoctrine();
+
+        $workouts = $em->getRepository('BeubiDemoBundle:Workout')->findAll();
+
+        $paginator  = $this->get('knp_paginator');
+        $pagination = $paginator->paginate($workouts, $this->get('request')->query->get('page', 1),
+            $this->container->getParameter('max_page_items'));
+
+        return array(
+            'workouts' => $pagination,
+        );
+    }
 }

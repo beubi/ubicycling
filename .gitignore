@@ -21,3 +21,6 @@ app/spool/*
 # Vagrant & Chef
 .vagrant
 chef/cookbooks/*
+
+#.idea
+.idea/
