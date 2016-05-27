@@ -14,6 +14,7 @@
         "symfony/monolog-bundle": "2.7.*",
         "sensio/distribution-bundle": "~3.0",
         "sensio/framework-extra-bundle": "~3.0",
+        "friendsofsymfony/user-bundle": "2.0.*@dev",
 
         "twig/twig": "1.20.0",
         "twig/extensions": "~1.0",
@@ -56,7 +57,10 @@
         "symfony-web-dir": "web",
         "symfony-assets-install": "relative",
         "incenteev-parameters": {
-            "file": "app/config/parameters.yml"
+            "file": "app/config/parameters.yml",
+            "env-map": {
+                "database_host": "DATABASE_HOST"
+            }
         },
         "branch-alias": {
             "dev-master": "2.7-dev"
