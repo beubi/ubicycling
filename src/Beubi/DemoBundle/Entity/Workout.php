@@ -57,6 +57,13 @@ class Workout
     private $duration;
 
     /**
+     * @var float
+     *
+     * @ORM\Column(name="calories", type="integer", nullable=true)
+     */
+    private $calories;
+
+    /**
      * @return int
      */
     public function getId()
@@ -150,5 +157,21 @@ class Workout
     public function setDuration($duration)
     {
         $this->duration = $duration;
+    }
+
+    /**
+     * @return float
+     */
+    public function getCalories()
+    {
+        return $this->calories;
+    }
+
+    /**
+     * @param float $calories
+     */
+    public function setCalories($calories)
+    {
+        $this->calories = $calories;
     }
 }

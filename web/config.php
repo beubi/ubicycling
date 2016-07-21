@@ -122,4 +122,3 @@ $minorProblems = $symfonyRequirements->getFailedRecommendations();
         </div>
     </body>
 </html>
-<!--This is one more test comment-->
