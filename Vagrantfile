@@ -38,6 +38,7 @@ Vagrant.configure('2') do |config|
   config.vm.provider :lxc do |lxc, override|
     override.vm.hostname = 'ubicycling-container'
     override.vm.synced_folder '.', '/srv/ubicycling/current'
+    lxc.backingstore = 'dir'
     lxc.customize 'cgroup.memory.limit_in_bytes', '1536M'
   end
 end

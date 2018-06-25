@@ -29,7 +29,7 @@ services:
   # It is automatically started by docker-compose
   #  when you start another one that links to it
   database:
-    image: mysql
+    image: mysql:5.7
     environment:
       MYSQL_ROOT_PASSWORD: afe592de49656b627e4fc8a84dbbb032
       MYSQL_USER: ubicycling
